@@ -27,6 +27,8 @@ nav {
     display: flex;
     background-color: pink;
     height: 10vh;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 /* about me section */
@@ -50,8 +52,6 @@ article {
 }
 
 .projectTitle {
-    z-index: 2;
-    grid-area: all;
     justify-self: center;
     align-self: center;
     padding: 50px;
@@ -83,8 +83,8 @@ footer {
 /* blob animation */
 .container {
     grid-area: name;
-    margin: 0;
-    padding: 0;
+    /* margin: 0;
+    padding: 0; */
     overflow: hidden;
     background: #FFB1A4;
     text-align: center;
@@ -97,13 +97,14 @@ footer {
 .titleName {
     /* grid-area: name; */
     color: rgb(255, 255, 255);
-    font-size: 4em;
+    font-size: 2vw;
     line-height: 1;
     /* position: relative; */
     z-index: 1;
     justify-self: center;
     align-self: center;
     grid-area: layout;
+    max-width: 100%;
     /* position: absolute;
     top: 0; */ 
   }
@@ -122,9 +123,9 @@ footer {
     animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
-    /* animation-play-state: running; */
+ animation-play-state: running; 
     grid-area: layout;
-  }
+  } 
 /*   
   .about:hover  ~ .container>.blob {
       animation-play-state: paused;
