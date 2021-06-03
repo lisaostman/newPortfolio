@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:700');
-
+  
 body {
  /* resetting default  */
     padding: 0;
@@ -8,26 +8,79 @@ body {
 /* setting up page layout */
     display: grid;
     grid-template-areas: 
-    "nav nav nav nav"
-    "about about about name"
-    "about about about name"
-    "project project project project"
-    "project project project project"
-    "footer footer footer footer"
+    "nav nav nav"
+    "name about about"
+    "name about about"
+    "title title title"
+    "project project project"
+    "project project project"
+    "footer footer footer"
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
+/* navigation */
 nav {
     grid-area: nav;
+    display: flex;
     background-color: pink;
-    height: 5vh;
+    height: 10vh;
 }
 
+/* about me section */
 article {
     grid-area: about;
     background-color: pink;
-    height: 55vh;
+    height: 90vh;
 }
 
+/* projects section*/
+.title {
+    grid-area: title;
+    color: rgb(255, 255, 255);
+    font-size: 2em;
+    line-height: 1;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: 'Poppins', sans-serif;
+    background-color: pink;
+    padding: 20px 10px;
+}
+
+.projectTitle {
+    z-index: 2;
+    grid-area: all;
+    justify-self: center;
+    align-self: center;
+    padding: 50px;
+}
+
+.projects {
+    grid-area: project;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.project {
+   flex-basis: 33.333333%;
+   flex-shrink: 0;
+}
+
+img { 
+    max-width: 100%;
+}
+
+/* footer */
+footer {
+    grid-area: footer;
+    padding: 50px;
+    background-color: rgb(255, 173, 159);
+}
+
+
+/* blob animation */
 .container {
     grid-area: name;
     margin: 0;
@@ -35,42 +88,47 @@ article {
     overflow: hidden;
     background: #FFB1A4;
     text-align: center;
-    height: 55vh;
-    position: relative;
+    height: 90vh;
+    display: grid;
+    grid-template-areas: "layout"
+    /* position: relative; */
 }
 
 .titleName {
     /* grid-area: name; */
     color: rgb(255, 255, 255);
-    font-size: 5em;
+    font-size: 4em;
     line-height: 1;
+    /* position: relative; */
+    z-index: 1;
+    justify-self: center;
+    align-self: center;
+    grid-area: layout;
+    /* position: absolute;
+    top: 0; */ 
+  }
+
+  .whiteText {
     font-weight: bold;
     letter-spacing: 2px;
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
-    /* position: relative; */
-    z-index: 1;
-    position: absolute;
-    top: 0;
   }
 
   .blob {
-    /* position: absolute; */
-    top: 0;
-    left: 0;
     fill: #f865af;
-    width: 25vmax;
+    width: 35vmax;
     animation-name: blob;
     animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
-    animation-play-state: paused;
-    position: absolute;
+    /* animation-play-state: running; */
+    grid-area: layout;
   }
-  
+/*   
   .about:hover  ~ .container>.blob {
-      animation-play-state: running;
-  }
+      animation-play-state: paused;
+  } */
   
   @keyframes blob {
     0%   { transform: scale(1)   translate(10px, -30px); }
@@ -79,4 +137,4 @@ article {
     78%  { transform: scale(1.3) translate(0%, 50%) rotate(-20deg); }
     80%  { transform: scale(1.3) translate(0%, 50%) rotate(-20deg); }
     100% { transform: scale(1)   translate(10px, -30px); }
-  } */
+  } 
