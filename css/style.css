@@ -18,14 +18,18 @@ body {
 }
 
 a {
-    color: white;
+    color: #ff6f69;
     text-decoration: none;
+}
+
+a:hover {
+    color: #ffcc5c
 }
 /* navigation */
 nav {
     grid-area: nav;
     display: flex;
-    background-color: pink;
+    background-color: #ffeead;
     height: 10vh;
     justify-content: space-evenly;
     align-items: center;
@@ -34,20 +38,20 @@ nav {
 /* about me section */
 article {
     grid-area: about;
-    background-color: pink;
+    background-color: #9ff3cc;
     height: 90vh;
 }
 
 /* projects section*/
 .title {
     grid-area: title;
-    color: rgb(255, 255, 255);
+    color: #ffcc5c;
     font-size: 2em;
     line-height: 1;
     font-weight: bold;
     letter-spacing: 2px;
     font-family: 'Poppins', sans-serif;
-    background-color: pink;
+    background-color: #ffeead;
     padding: 20px 10px;
 }
 
@@ -76,7 +80,7 @@ img {
 footer {
     grid-area: footer;
     padding: 50px;
-    background-color: rgb(255, 173, 159);
+    background-color: #ffeead;
 }
 
 
@@ -86,7 +90,7 @@ footer {
     /* margin: 0;
     padding: 0; */
     overflow: hidden;
-    background: #FFB1A4;
+    background: #ffcc5c;
     text-align: center;
     height: 90vh;
     display: grid;
@@ -117,7 +121,7 @@ footer {
   }
 
   .blob {
-    fill: #f865af;
+    fill: #ff6769;
     width: 35vmax;
     animation-name: blob;
     animation-duration: 10s;
